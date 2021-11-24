@@ -1,0 +1,27 @@
+{
+  "name": "telegramapp",
+  "version": "0.1.0",
+  "description": "Another Telegram clone",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesantaniello/Telegramapp.git"
+  },
+  "keywords": [
+    "chat",
+    "telegram",
+    "server"
+  ],
+  "author": "Carlos Santaniello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cesantaniello/Telegramapp/issues"
+  },
+  "homepage": "https://github.com/cesantaniello/Telegramapp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
