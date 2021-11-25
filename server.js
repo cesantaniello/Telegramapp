@@ -20,7 +20,7 @@ router.get('/message', function (req, res) {
 router.post('/message', function (req, res) {
     console.log(req.query);
     (req.query.error == 'ok') 
-        ? response.error(req, res, 'Error simulado', 400) 
+        ? response.error(req, res, 'Error inesperado', 500, 'error-post') 
         : response.success(req, res, 'Creado correctamente', 201);
 });
 
