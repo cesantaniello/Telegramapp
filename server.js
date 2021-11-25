@@ -16,18 +16,10 @@ router.get('/message', function (req, res) {
 });
 
 router.post('/message', function (req, res) {
-    res.send('Mensaje agregado');
-});
-
-router.delete('/message', function (req, res) {
     console.log(req.query);
     console.log(req.body);
-    res.send('Mensaje '+ req.body.text +' borrado');
+    res.status(201).send([{error: '', body: 'Creado correctamente'}]);
 });
-
-// app.use('/', function (req, res) {
-//     res.send('Hola');
-// });
 
 app.listen(3000);
 console.log('La aplicación está escuchando en http://localhost:3000');
