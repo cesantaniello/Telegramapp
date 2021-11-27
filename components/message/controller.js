@@ -9,7 +9,7 @@ function addMessage(user, message) {
         }
 
         const fullMessage = {
-            user, message, date: new Date(),
+            chat, user, message, date: new Date(),
         };
 
         store.add(fullMessage);
