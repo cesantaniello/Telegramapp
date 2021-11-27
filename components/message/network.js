@@ -35,4 +35,14 @@ router.patch('/:id', function (req, res){
         });
 })
 
+router.delete('/:id', function (req, res){
+    controller.deleteMessage(req.params.id)
+        .then(() => {
+            response.success(req, res, `Mensaje ${req.params.id} eliminado`, 200);
+        })
+        .catch(e => {
+            response.error(req, res, 'Error interno', 500, e);
+        });
+});
+
 module.exports = router;
