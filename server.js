@@ -2,13 +2,15 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 
+const config = require('./config');
+
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const socket = require('socket.io');
 const db = require('./db');
 const router = require('./network/routes');
 
-db('mongodb+srv://admin:admin@cluster0.ni2ao.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+db(config.dbUrl);
 
 app.use(cors());
 
@@ -21,6 +23,6 @@ router(app);
 
 app.use('/app', express.static('public'));
 
-server.listen(3000, function() {
-    console.log('La aplicación está escuchando en http://localhost:3000');
+server.listen(config.port, function() {
+    console.log('La aplicación está escuchando en '+ config.host + ':' + config.port);
 });
